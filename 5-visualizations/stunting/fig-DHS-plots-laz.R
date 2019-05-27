@@ -50,6 +50,7 @@ registerDoParallel(cores = 3)
 # created by 7_DHS-data-cleaning.R
 #---------------------------------------
 dhaz <- readRDS(file = (here::here("data", "clean-DHS-haz.rds")))
+
 source("../shared/helper_sampling_weights.R")
 
 #---------------------------------------
@@ -213,7 +214,7 @@ laz_ageplot
 
 # define standardized plot names
 laz_ageplot_name <- create_name(
-  outcome = "laz",
+  outcome = "LAZ",
   cutoff = 2,
   measure = "mean DHS",
   population = "overall and region-stratified",
@@ -342,7 +343,7 @@ laz_dplot
 
 # define standardized plot names
 laz_dplot_name <- create_name(
-  outcome = "laz",
+  outcome = "LAZ",
   cutoff = 2,
   measure = "density DHS",
   population = "overall and region-stratified",
